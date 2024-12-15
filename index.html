@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+        }
+
+        .card {
+            text-align: center;
+            color: #fff;
+        }
+
+        .heart {
+            width: 100px;
+            height: 90px;
+            position: relative;
+            background: #ff6f61;
+            margin: 0 auto 20px;
+            transform: rotate(-45deg);
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: '';
+            width: 100px;
+            height: 90px;
+            position: absolute;
+            background: #ff6f61;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="heart"></div>
+        <h1>Happy Valentine's Day!</h1>
+        <p>You fill my heart with joy and love.</p>
+        <p class="signature">- With all my love, Me</p>
+    </div>
+</body>
+</html>
